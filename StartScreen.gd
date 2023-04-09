@@ -9,9 +9,11 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+func _process(delta):
+	
+	# Also allow pressing spacebar to do the same thing as pressing the button
+	if Input.is_action_just_released("flap_keypress"):
+		$StartButton.emit_signal("pressed")
 
 func _on_ScoreTimer_timeout():
 	score += 1

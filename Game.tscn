@@ -11,6 +11,7 @@ font_data = ExtResource( 3 )
 [node name="Game" type="Node"]
 
 [node name="Bird" parent="." instance=ExtResource( 1 )]
+position = Vector2( 963, -61 )
 
 [node name="PipeSpawner" parent="." instance=ExtResource( 2 )]
 

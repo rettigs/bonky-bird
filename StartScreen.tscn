@@ -20,15 +20,15 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -708.0
-margin_top = -400.0
+margin_top = -360.0
 margin_right = 709.0
-margin_bottom = -192.0
+margin_bottom = -136.0
 custom_fonts/font = SubResource( 1 )
 text = "Press space to start!"
 
 [node name="Message" type="Label" parent="."]
 anchor_right = 1.0
-margin_top = 192.0
+margin_top = 120.0
 margin_bottom = 618.0
 custom_fonts/font = SubResource( 2 )
 text = "Flappy Bird"
