@@ -18,6 +18,17 @@ custom_fonts/font = SubResource( 1 )
 text = "0"
 
 [node name="ScoreTimer" type="Timer" parent="ScoreLabel"]
-autostart = true
+
+[node name="StartButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -814.0
+margin_top = 180.0
+margin_right = 815.0
+margin_bottom = 356.0
+custom_fonts/font = SubResource( 1 )
+text = "Press space to start!"
 
 [connection signal="timeout" from="ScoreLabel/ScoreTimer" to="." method="_on_ScoreTimer_timeout"]

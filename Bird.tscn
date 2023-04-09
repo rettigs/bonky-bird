@@ -22,7 +22,7 @@ animations = [ {
 radius = 23.746
 
 [node name="Bird" type="RigidBody2D"]
-position = Vector2( 265, 241 )
+position = Vector2( 974, 470 )
 gravity_scale = 10.0
 contacts_reported = 1
 contact_monitor = true
@@ -41,7 +41,7 @@ color = Color( 1, 0, 0, 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 1 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
