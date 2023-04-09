@@ -18,7 +18,7 @@ func _process(delta):
 	if $PowerupEffect.visible:
 		$PowerupEffect.set_rotation($PowerupEffect.get_rotation() + deg2rad(2000) * delta)
 	
-	if Input.is_action_just_released("flap_keypress"):
+	if Input.is_action_just_pressed("flap_keypress"):
 		self.linear_velocity = Vector2.UP * flap_strength
 		# Flap upward
 		#self.linear_velocity.y = (Vector2.UP * flap_strength).y

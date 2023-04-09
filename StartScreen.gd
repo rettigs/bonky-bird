@@ -15,4 +15,3 @@ func _ready():
 
 func _on_ScoreTimer_timeout():
 	score += 1
-	$ScoreLabel.text = str(score)

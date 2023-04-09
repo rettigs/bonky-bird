@@ -1,37 +1,34 @@
 extends Node
 
-export(PackedScene) var bird_scene
-export(PackedScene) var pipe_spawner_scene
+export(PackedScene) var start_screen_scene
+export(PackedScene) var game_scene
 
-var bird
-var pipe_spawner
+var start_screen
+var game
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+var score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$HUD/StartButton.connect("pressed", self, "_on_StartButton_pressed")
+	start_screen = $StartScreen
+	start_screen.get_node("StartButton").connect("pressed", self, "_on_StartButton_pressed")
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
 func _on_StartButton_pressed():
-	start_game()
+	start_screen.queue_free()
+	game = game_scene.instance()
+	add_child(game)
+	game.get_node("Bird/VisibilityNotifier2D").connect("screen_exited", self, "on_bird_leave_screen")
+	game.get_node("ScoreTimer").connect("timeout", self, "increase_score")
 
-func start_game():
-	$HUD/StartButton.hide()
-	$HUD/ScoreLabel/ScoreTimer.start()
-	bird = bird_scene.instance()
-	add_child(bird)
-	pipe_spawner = pipe_spawner_scene.instance()
-	add_child(pipe_spawner)
-	
+func increase_score():
+	score += 1
+	game.get_node("ScoreLabel").text = str(score)
 
-func show_restart_screen():
-	bird.queue_free()
-	pipe_spawner.queue_free()
-	
+func on_bird_leave_screen():
+	pass
+
