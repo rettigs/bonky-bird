@@ -2,6 +2,7 @@
 - give clouds black outline?
 - make it save progress on disk instead of memory
 - fix issue where if you keep hitting space quickly right after dying, glitches the game. either has both scenes running at once, or crashes
-- make bird-pipe collision not make sound if it was only a light hit (or adjust volume based on how hard the hit was)
 - add sound effect for starting the game
 - fix clouds despawning randomly
+- rename to Bonky Bird
+- fix bug where if game ends due to flying off top of screen, you fall down onto screen again and then off again, triggering game end twice and creating conflicting scenes

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://images/Pipe.png" type="Texture" id=1]
 [ext_resource path="res://Pipe.gd" type="Script" id=2]
 [ext_resource path="res://audio/bong1.wav" type="AudioStream" id=3]
+[ext_resource path="res://audio/bonk.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 75, 600 )
@@ -29,6 +30,12 @@ shape = SubResource( 1 )
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 position = Vector2( 6.19888e-06, -6.67572e-06 )
 scale = Vector2( 8, 60 )
+
+[node name="BonkSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 10.0
+pitch_scale = 0.6
+bus = "Effects"
 
 [node name="BongSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
