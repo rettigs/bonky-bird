@@ -51,9 +51,11 @@ func increase_score():
 		game.get_node("ScoreLabel").text = str(score)
 
 func on_bird_leave_screen():
-	if !is_game_active:
-		return # Do nothing if the game has already ended, e.g. if bird went off top of screen and then fell back down and off the bottom of the screen
-	print("bird left screen")
+	# Delete notifier so that we don't get this same method called again until after a new game starts
+	# Fixes issue of bird going off top of screen, then falling back down and off the screen a second time, triggering a second gameover screen
+	# Fixes issue where you if you start a new game while bird is still on screen, it causes bird to be deleted, thereby instantly going "off screen" and instantly triggering gameover
+	game.get_node("Bird/VisibilityNotifier2D").queue_free()
+
 	is_game_active = false
 	game.get_node("Bird").is_alive = false # no more flapping
 	$Music.stop()
