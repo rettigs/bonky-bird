@@ -24,6 +24,9 @@ func _on_StartButton_pressed():
 	# Clear out the previous game object first if it existed
 	if game:
 		game.queue_free()
+	else:
+		# Only play start sound when starting for the first time
+		$GameStartSound.play()
 	
 	is_game_active = true
 	score = 0
