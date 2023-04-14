@@ -43,6 +43,9 @@ func activate_powerup():
 	self.mass = 1000
 	$AnimatedSprite.speed_scale = 4
 	$PowerupEffect.visible = true
+	# Don't restart the sound if it's already playing, e.g. we already have a powerup and are extending the time
+	if !$PowerupSound.playing:
+		$PowerupSound.play()
 	
 	# If they're behind, give them a boost forward. More boost the farther back you are.
 	self.apply_central_impulse(Vector2.RIGHT * (1920-self.position.x)/2)
@@ -55,3 +58,4 @@ func deactivate_powerup():
 	self.mass = 1
 	$AnimatedSprite.speed_scale = 1
 	$PowerupEffect.visible = false
+	$PowerupSound.stop()
