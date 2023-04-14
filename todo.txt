@@ -5,6 +5,7 @@
     - seems to happen if you hit space a bunch after flying off top of screen
     - pressing space while bird is on screen keeps resetting game and game over screen at the same time, but it goes back to normal if you let the bird fall off the screen and *then* hit space
     - game over screen is *supposed* to appear while the game screen is still running, but the issue appears like maybe a new game is started *after* the game over screen appears
+    - oh I see, the issue happens if you restart the game while the bird is on screen! when the new game starts, the bird appears offscreen, which immediately causes a game over condition.
 - add sound effect for starting the game
 - fix clouds despawning randomly
 - rename to Bonky Bird
