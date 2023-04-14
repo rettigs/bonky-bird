@@ -8,3 +8,8 @@ func _ready():
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
+
+func _on_Pipe_body_entered(body):
+	if body.is_in_group("pipes"):
+		$BongSound.pitch_scale = rand_range(0.5, 0.9)
+		$BongSound.play()

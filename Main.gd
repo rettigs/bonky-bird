@@ -36,11 +36,11 @@ func _on_StartButton_pressed():
 	AudioServer.set_bus_effect_enabled(1, 0, false)
 	AudioServer.set_bus_effect_enabled(1, 1, false)
 	
-	# Restart the song if it was stopped
+	# Restart the song if it was stopped (e.g. on replays, due to the game over music playing)
 	if !$Music.playing:
 		$Music.play()
 	
-	# Don't activate the flap button immediately though, so they don't accidentally flap off the screen right at the start
+	# Don't activate the flap button immediately on game start, so they don't accidentally flap off the screen instantly
 	yield(get_tree().create_timer(0.5), "timeout")
 	game.get_node("Bird").is_alive = true
 

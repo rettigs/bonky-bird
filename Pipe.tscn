@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Pipe.png" type="Texture" id=1]
 [ext_resource path="res://Pipe.gd" type="Script" id=2]
+[ext_resource path="res://audio/bong1.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 75, 600 )
@@ -10,6 +11,8 @@ extents = Vector2( 75, 600 )
 position = Vector2( 2000, 548 )
 mass = 5.0
 gravity_scale = 0.0
+contacts_reported = 3
+contact_monitor = true
 linear_damp = 0.0
 script = ExtResource( 2 )
 __meta__ = {
@@ -27,4 +30,11 @@ shape = SubResource( 1 )
 position = Vector2( 6.19888e-06, -6.67572e-06 )
 scale = Vector2( 8, 60 )
 
+[node name="BongSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 10.0
+pitch_scale = 0.9
+bus = "Effects"
+
+[connection signal="body_entered" from="." to="." method="_on_Pipe_body_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

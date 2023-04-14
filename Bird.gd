@@ -31,6 +31,7 @@ func _process(delta):
 
 func _on_Bird_body_entered(body):
 	if body.is_in_group("pipes"):
+		$BonkSound.pitch_scale = rand_range(0.4, 0.7)
 		$BonkSound.play()
 	if body.is_in_group("powerups"):
 		body.queue_free()
