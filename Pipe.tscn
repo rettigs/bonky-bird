@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Pipe.png" type="Texture" id=1]
-[ext_resource path="res://TopPipe.gd" type="Script" id=2]
+[ext_resource path="res://Pipe.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 75, 600 )
@@ -26,3 +26,5 @@ shape = SubResource( 1 )
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 position = Vector2( 6.19888e-06, -6.67572e-06 )
 scale = Vector2( 8, 60 )
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
