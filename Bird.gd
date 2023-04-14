@@ -7,7 +7,7 @@ export var boost_length = 5
 # var a = 2
 # var b = "text"
 
-
+export var is_alive = false # whether bird is allowed to flap
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,7 +18,7 @@ func _process(delta):
 	if $PowerupEffect.visible:
 		$PowerupEffect.set_rotation($PowerupEffect.get_rotation() + deg2rad(2000) * delta)
 	
-	if Input.is_action_just_pressed("flap_keypress"):
+	if is_alive && Input.is_action_just_pressed("flap_keypress"):
 		self.linear_velocity = Vector2.UP * flap_strength
 		# Flap upward
 		#self.linear_velocity.y = (Vector2.UP * flap_strength).y

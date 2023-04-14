@@ -1,8 +1,7 @@
 - add music
 - add sound effects
 - get better font, e.g. pixely to match the aesthetic.
-- make the font have a black background too
-- give clouds black background?
+- make the font have a black Outline too
+- give clouds black outline?
 - make it save progress on disk instead of memory
-- fix issue where if you die while hitting space, it instantly restarts, and occasionally glitches the game
-    - also glitches if you hit space right after starting. game ends, but also keeps going?
+- fix issue where if you keep hitting space quickly right after dying, glitches the game. either has both scenes running at once, or crashes

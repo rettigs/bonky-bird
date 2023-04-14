@@ -31,6 +31,10 @@ func _on_StartButton_pressed():
 	add_child(game)
 	game.get_node("Bird/VisibilityNotifier2D").connect("screen_exited", self, "on_bird_leave_screen")
 	game.get_node("ScoreTimer").connect("timeout", self, "increase_score")
+	
+	# Don't activate the flap button immediately though, so they don't accidentally flap off the screen right at the start
+	yield(get_tree().create_timer(0.5), "timeout")
+	game.get_node("Bird").is_alive = true
 
 func increase_score():
 	if is_game_active:
@@ -39,9 +43,9 @@ func increase_score():
 
 func on_bird_leave_screen():
 	is_game_active = false
+	game.get_node("Bird").is_alive = false # no more flapping
 	start_screen = start_screen_scene.instance()
 	add_child(start_screen)
-	start_screen.get_node("StartButton").connect("pressed", self, "_on_StartButton_pressed")
 	
 	if score > high_score:
 		high_score = score
@@ -49,4 +53,6 @@ func on_bird_leave_screen():
 	else:
 		start_screen.get_node("Message").text = "Too bad!\nHigh score is: %s\nTry again?" % high_score
 
-
+	# Don't activate the start button immediately though, so they don't accidentally skip it by continuing to flap
+	yield(get_tree().create_timer(0.5), "timeout")
+	start_screen.get_node("StartButton").connect("pressed", self, "_on_StartButton_pressed")
