@@ -9,7 +9,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta):
 	
 	# Also allow pressing spacebar to do the same thing as pressing the button
 	if Input.is_action_just_released("flap_keypress"):
