@@ -12,6 +12,9 @@ var high_score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# Get rid of mouse pointer by capturing it and then not doing anything with it
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
 	start_screen = $StartScreen
 	start_screen.get_node("StartButton").connect("pressed", self, "_on_StartButton_pressed")
 
