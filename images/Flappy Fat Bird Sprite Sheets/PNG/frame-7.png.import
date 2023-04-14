@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/frame-6.png-c9db0d4d39521b312ac74594527bc54e.stex"
+path="res://.import/frame-7.png-1cf2751f7c5ac5f47f79f51be2738ca9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Flappy Fat Bird Sprite Sheets/PNG/frame-6.png"
-dest_files=[ "res://.import/frame-6.png-c9db0d4d39521b312ac74594527bc54e.stex" ]
+source_file="res://images/Flappy Fat Bird Sprite Sheets/PNG/frame-7.png"
+dest_files=[ "res://.import/frame-7.png-1cf2751f7c5ac5f47f79f51be2738ca9.stex" ]
 
 [params]
 
