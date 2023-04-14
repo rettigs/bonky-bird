@@ -2,7 +2,9 @@
 - give clouds black outline?
 - make it save progress on disk instead of memory
 - fix issue where if you keep hitting space quickly right after dying, glitches the game. either has both scenes running at once, or crashes
+    - seems to happen if you hit space a bunch after flying off top of screen
+    - pressing space while bird is on screen keeps resetting game and game over screen at the same time, but it goes back to normal if you let the bird fall off the screen and *then* hit space
+    - game over screen is *supposed* to appear while the game screen is still running, but the issue appears like maybe a new game is started *after* the game over screen appears
 - add sound effect for starting the game
 - fix clouds despawning randomly
 - rename to Bonky Bird
-- fix bug where if game ends due to flying off top of screen, you fall down onto screen again and then off again, triggering game end twice and creating conflicting scenes

@@ -50,6 +50,8 @@ func increase_score():
 		game.get_node("ScoreLabel").text = str(score)
 
 func on_bird_leave_screen():
+	if !is_game_active:
+		return # Do nothing if the game has already ended, e.g. if bird went off top of screen and then fell back down and off the bottom of the screen
 	is_game_active = false
 	game.get_node("Bird").is_alive = false # no more flapping
 	$Music.stop()
