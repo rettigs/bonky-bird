@@ -16,7 +16,6 @@
 [ext_resource path="res://images/Flappy Fat Bird Sprite Sheets/PNG/frame-3.png" type="Texture" id=14]
 
 [sub_resource type="ParticlesMaterial" id=1]
-lifetime_randomness = 1.0
 emission_shape = 2
 emission_box_extents = Vector3( 1, 600, 1 )
 flag_disable_z = true
@@ -50,8 +49,8 @@ color = Color( 0.129412, 0.815686, 1, 1 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( 2255, 531 )
-amount = 30
-lifetime = 120.0
+amount = 15
+lifetime = 60.0
 preprocess = 120.0
 visibility_rect = Rect2( -2700, -554.992, 2800, 1118.37 )
 process_material = SubResource( 1 )
