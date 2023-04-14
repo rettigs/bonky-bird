@@ -46,6 +46,7 @@ flap_keypress={
 [physics]
 
 common/enable_pause_aware_picking=true
+common/physics_interpolation=true
 
 [rendering]
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/banana man - kitsune2.ogg-2320072ddec54f2c1048871c12408d6d.oggstr"
+
+[deps]
+
+source_file="res://audio/banana man - kitsune2.ogg"
+dest_files=[ "res://.import/banana man - kitsune2.ogg-2320072ddec54f2c1048871c12408d6d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

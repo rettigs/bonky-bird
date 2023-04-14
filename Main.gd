@@ -32,6 +32,14 @@ func _on_StartButton_pressed():
 	game.get_node("Bird/VisibilityNotifier2D").connect("screen_exited", self, "on_bird_leave_screen")
 	game.get_node("ScoreTimer").connect("timeout", self, "increase_score")
 	
+	# Music will sound like an old radio when starting out. Switch to regular music once game is started.
+	AudioServer.set_bus_effect_enabled(1, 0, false)
+	AudioServer.set_bus_effect_enabled(1, 1, false)
+	
+	# Restart the song if it was stopped
+	if !$Music.playing:
+		$Music.play()
+	
 	# Don't activate the flap button immediately though, so they don't accidentally flap off the screen right at the start
 	yield(get_tree().create_timer(0.5), "timeout")
 	game.get_node("Bird").is_alive = true
@@ -44,6 +52,8 @@ func increase_score():
 func on_bird_leave_screen():
 	is_game_active = false
 	game.get_node("Bird").is_alive = false # no more flapping
+	$Music.stop()
+	$GameOverSound.play()
 	start_screen = start_screen_scene.instance()
 	add_child(start_screen)
 	

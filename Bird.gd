@@ -30,6 +30,8 @@ func _process(delta):
 	#	self.linear_velocity.x = self.linear_velocity.x * .99
 
 func _on_Bird_body_entered(body):
+	if body.is_in_group("pipes"):
+		$BonkSound.play()
 	if body.is_in_group("powerups"):
 		body.queue_free()
 		activate_powerup()

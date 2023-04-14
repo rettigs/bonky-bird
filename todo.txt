@@ -1,6 +1,8 @@
-- add music
-- add sound effects
 - get better font, e.g. pixely to match the aesthetic.
 - give clouds black outline?
 - make it save progress on disk instead of memory
 - fix issue where if you keep hitting space quickly right after dying, glitches the game. either has both scenes running at once, or crashes
+- change pipe sound effect to a metal bong
+    - also make it change volume and/or pitch based on how hard it was hit
+- add sound effect for starting the game
+- add sound effect for powerup
