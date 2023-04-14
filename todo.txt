@@ -3,4 +3,4 @@
 - make it save progress on disk instead of memory
 - add sound effect for starting the game
 - fix clouds despawning randomly
-- rename to Bonky Bird
+- rename to Bonky Bird in all files/repo
