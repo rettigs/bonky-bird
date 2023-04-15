@@ -63,11 +63,12 @@ texture = ExtResource( 2 )
 position = Vector2( 960, 500 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+volume_db = -10.0
 autoplay = true
 bus = "Music"
 
@@ -78,5 +79,4 @@ bus = "Effects"
 
 [node name="GameOverSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
-volume_db = 10.0
 bus = "Game Over"
