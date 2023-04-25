@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://fonts/RobotoMono/RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://StartScreen.gd" type="Script" id=3]
@@ -11,6 +11,12 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 128
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 46
 outline_size = 6
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
@@ -36,4 +42,12 @@ margin_top = 120.0
 margin_bottom = 618.0
 custom_fonts/font = SubResource( 2 )
 text = "Bonky Bird"
+align = 1
+
+[node name="QuitText" type="Label" parent="."]
+anchor_right = 1.0
+margin_top = 975.0
+margin_bottom = 1073.0
+custom_fonts/font = SubResource( 4 )
+text = "(escape key to exit)"
 align = 1

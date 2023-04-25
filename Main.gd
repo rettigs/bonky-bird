@@ -78,3 +78,9 @@ func on_bird_leave_screen():
 	# Don't activate the start button immediately though, so they don't accidentally skip it by continuing to flap
 	yield(get_tree().create_timer(0.5), "timeout")
 	start_screen.get_node("StartButton").connect("pressed", self, "_on_StartButton_pressed")
+
+func _unhandled_input(event):
+	match event.get_class():
+		"InputEventKey":
+			if Input.is_action_just_pressed("quit_game"):
+				get_tree().quit()
