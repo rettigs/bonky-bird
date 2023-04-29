@@ -1,0 +1,17 @@
+Music:
+- Banana Man by Kitsune^2 - https://lapfox.bandcamp.com/track/banana-man
+
+Sounds:
+- Banana powerup: custom (Sean Rettig)
+- Bonks: custom (Sean Rettig)
+- Game over: From Godot "Dodge the Creeps" tutorial
+- Game start: NenadSimic - https://opengameart.org/content/picked-coin-echo-2
+
+Art:
+- Banana: master484 - https://opengameart.org/content/good-fruits-m484-games
+- Bird: bevouliin.com - https://opengameart.org/content/fat-bird-sprite-sheets-for-gamedev
+- Cloud: Ian Peter - https://opengameart.org/content/cloud-2
+- Pipe: custom (Sean Rettig)
+
+Fonts:
+- RobotoMono by Christian Robertson - https://fonts.google.com/specimen/Roboto+Mono
