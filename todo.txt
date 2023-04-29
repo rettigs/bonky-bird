@@ -1,5 +1,3 @@
 - get better font, e.g. pixely to match the aesthetic.
 - give clouds black outline?
 - make it save progress on disk instead of memory
-- rename to Bonky Bird in all files/repo
-- migrate to web-compatible engine version so I can host it online
