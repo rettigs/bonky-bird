@@ -1,3 +1,5 @@
 - get better font, e.g. pixely to match the aesthetic.
 - give clouds black outline?
 - make it save progress on disk instead of memory
+- allow tapping screen to flap so it works on phones (in browser)
+- add credits in-game

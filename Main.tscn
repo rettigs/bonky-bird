@@ -56,7 +56,7 @@ scale_amount_random = 0.7
 position = Vector2( 960, 500 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
-frame = 5
+frame = 6
 playing = true
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
